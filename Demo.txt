@@ -1,0 +1,150 @@
+---------------CÂU LỆNH CODE-Demo---------------
+--LOGIN--
+- Hãy dùng ngôn ngữ HTML/CSS code cho tôi 1 trang #Login:
+- #thiết kế trang Login:
+	+ Trang Login thiết kế theo phong cách rạp chiếu phim, có background(#background này sẽ để hiệu ứng làm mờ) là ảnh logo của máy quay phim (#chọn ảnh có nền đen và logo màu đỏ)
+
+	+ khung đăng nhập nằm chính giữa trang web(#khung màu trắng và chữ màu đen),có 2 bảng text để nhập thông tin tài khoản và mật khẩu, bên dưới là các nút như: "Đăng Nhập" ,"Đăng Ký"(#hai nút này có chữ màu trắng và khung màu đen),bên dưới có dòng "Quên Mật Khẩu"(#khi chuột đè lên thì có hiệu ứng chữ chuyển sang màu đỏ)
+
+- #Chức năng gồm có:
+	+ phần login có thể "Đăng Ký" tài khoản bằng Gmail(#Gmail khi dùng để tạo bắt buộc phải có đuôi #"@Gmail.com") hoặc số điện thoại(#bắt buộc phải có 10 số),phải có mật khẩu(#mật khẩu phải có ít nhất 10 kí tự), khi tạo có 2 lựa chọn tạo với quyền ADMIN hoặc USER
+	
+	+ Khi "Đăng nhập" đúng thông tin tài khoản thì có thông báo đăng nhập thành công ngược lại thì là đăng nhập thất bại báo lỗi("Sai thông tin tài khoản hoặc mật khẩu") hoặc nếu tài khoản chưa được tạo thì báo lỗi("Tài khoản không tồn tại") #tài khoản được xác định có tồn tại hay không phải thông qua tên tài khoản đã tạo 
+#Lưu ý:
+	- Tách code ra các trang HTML,CSS,JS
+	- ghi chú từng đoạn code
+	- Trang có hiệu ứng hover các nút như đăng nhập, đăng ký,...
+
+--TRANG CHỦ--
+- Hãy dùng ngôn ngữ HTML/CSS code cho tôi 1 trang chủ:
+- #thiết kế trang chủ:
+	+ Banner toàn bề ngang 100%, bề dọc 80%
+	+ phần thanh menu nằm phía trên banner trong thanh menu có(góc trái là logo "TEAM BẤT ỔN"(#thiết kế nhỏ gọn ở góc), ở giữa thanh menu là "TRANG CHỦ","PHIM"(#bên trong phim có 2 nhánh nhỏ là:"THỂ LOẠI" và "NGÀY CHIẾU"),"LỊCH SỬ","INFORMATION(#information có 1 nhánh nhỏ là"ABOUT US"), bên góc phải là thanh tìm kiếm và nút đăng nhập)
+	+ bên dưới banner là phần nội dung chính (#chiếm 70% bề ngang trang web) gồm "PHIM ĐANG CHIẾU" và "PHIM SẮP CHIẾU"(#mỗi cái lấy 10 ảnh poster của phim và #duới góc trái của mỗi tấm poster để #tag "PHIM ĐANG CHIẾU" hoặc "PHIM SẮP CHIẾU" tùy vào cột cột của poster đó)
+	+ cuối cùng là footer toàn bề ngang màn hình, trong footer chứa các thông ti như:(logo tên nhóm, chính sách công ty, thông tin liên hệ như:(Gmail ,số điện thoại)) toàn bộ thông tin sẽ là thông tin giả nhưng phải đầy đủ và hợp lý
+
+- #Chức năng gồm có:
+	+ Banner có nút mũi tên trái phải ở 2 bên banner(#căn giữa 2 bên) để người dùng tự bấm chuyển hình ,nếu người dùng không bấm nút thì cứ cách 5s là tự động đổi ảnh(#lấy hình ảnh #poster phim của các bộ phim tối đa 10 ảnh), hiệu ứng chuyển hình ảnh theo kiểu trượt tạo vòng lặp chạy liên tục
+	+ Thanh menu: các nhánh("THỂ LOẠI", "NGÀY CHIẾU","ABOUT US") sẽ #ẩn bên trong các mục khi di chuyển chuột mới hiện, thanh tìm kiếm trạng thái bình thường sẽ ở dạng icon kính lúp(#kiểu tối giản chỉ có màu trắng) nhưng khi di chuyển chuột vào icon sẽ hiện ra dòng text để gõ chữ, nút đăng nhập cũng ẩn dưới dạng icon(#kiểu tối giản chỉ có màu trắng),có hiệu ứng khi di chuột tới từng mục chữ sẽ chuyển sang màu đỏ
+	+ thanh menu và footer sẽ để chung 1 file có tên "HeaderFooter.css" để dùng cho tất cả các trang khác
+	+ nội dung: cột "PHIM ĐANG CHIẾU" và "PHIM SẮP CHIẾU" có nút mũi tên trái phải ở 2 bên để tìm phim làm hiệu ứng mờ hình ảnh từ hai bên cho tới giữa , ở giữa có tối đa 3 ảnh, hiệu ứng chuyển hình ảnh theo kiểu trượt (#lấy hình ảnh #poster phim của các bộ phim tối đa 10 ảnh)
+#Lưu ý:
+	- Màu chủ đạo là đen trắng, có hiệu ứng hover
+	- Hình ảnh dùng cho banner, phim đang chiếu , phim sắp chiếu là hình poster của các bộ phim
+	- ghi chú từng đoạn code
+	- liên kết tất cả các trang lại với nhau
+	- Tách code ra các trang HTML,CSS nhưng riêng trang JS là dùng chung nhưng phải ghi chú code của từng trang
+	
+--THÊM MỚI(TRANG CHỦ)--
+- #Thêm cho tôi tag độ tuổi vào góc trên bên phải của mỗi poster(#Banner, phim đang chiếu, phim sắp chiếu)  và tên phim dưới mỗi poster(#phim đang chiếu, phim sắp chiếu) 
+#Lưu ý:
+	- Giữ nguyên mọi chức năng 
+
+--TRANG CHI TIẾT PHIM--
+- Hãy dùng ngôn ngữ HTML/CSS code cho tôi 1 trang web Chi tiết phim
+ 
+- #Giao diện gồm có:
+	+ Banner của phim toàn bề ngang màn hình
+	+ Nội dung của chi tiết phim chiếm 70% bề ngang màn hình , bên trái hiện poster của phim, bên phải hiện tên,tag độ tuổi,thời lượng phim, ngày phát hành, quốc gia phát hành, thể loại, đạo diễn, bên dưới sẽ là nội dung phim và lịch chiếu(#Lịch chiếu chạy ngày tháng thực, hiện thứ,ngày, tháng)
+	+ cuối cùng là footer Nằm dưới cùng trang web
+- #Chức năng gồm có:
+	+ Banner khi bấm vô thì sẽ hiện video trailer dẫn link từ youtube, kích thước bằng 80%so với Banner	
+	+ Nội dung: #phần lịch chiếu có thể chọn ngày chiếu, khung giờ chiếu phim(#hiển thị thời gian bắt đầu và kết thúc)
+
+#Lưu ý:
+	- Màu chủ đạo là đen trắng, có hiệu ứng hover
+	- ghi chú từng đoạn code
+	- liên kết tất cả các trang lại với nhau
+	- Tách code ra các trang HTML,CSS nhưng riêng trang JS là dùng chung nhưng phải ghi chú code của từng trang
+	- lấy giao diện footer từ file chung 
+	- #TRANG CHI TIẾT PHIM LÀM THÀNH FILE DÙNG CHUNG CHO CÁC POSTER Ở TRANG CHỦ(#BANNER,PHIM ĐANG CHIẾU, PHIM SẮP CHIẾU), KHI BẤM VÀO CÁC POSTER ĐÓ SẼ HIỆN LÊN KHUNG TRANG CHI TIẾT PHIM ĐÓ
+
+--KHUNG ĐẶT VÉ--
+- Hãy sử dụng ngôn ngữ HTML/CSS code cho tôi 1 khung đặt vé:
+
+- #Giao diện gồm có:
+	+ bên trên của khung là nút quay lại
+	+ ở giữa là sơ đồ phòng vé hiển thị số thứ tự của ghế theo kiểu Alphanumeric , có các phần ghi chú bên dưới như(GHẾ ĐÃ ĐẶT, GHẾ BẠN CHỌN, GHẾ THƯỜNG, GHẾ VIP, GHẾ SWEETBOX, GHẾ TRUNG TÂM) #mỗi loại ghế để chú thích phía dưới sơ đồ kèm màu tương ứng
+	+bên dưới hiển thi tag độ tuổi, tên phim, giờ bắt đầu, giờ kết thúc,ngày chiếu, phòng chiếu, chỗ ngồi, tiền vé , nút đặt vé
+
+- #Chức năng gồm có:
+	+ bên trên nút quay lại khi bấm có thể thoát khỏi khung đặt vé
+	+ ở giữa sơ đồ phòng vé có chức năng phóng to thu nhỏ,có thể chọn ghế(#mỗi loại ghế sẽ có giá tiền khác nhau)
+	+ bên dưới giờ bắt đầu, giờ kết thúc, này chiếu #hiển thị giống với giờ bắt đầu, giờ kết thúc, này chiếu đã chọn ở phần chi tiết phim, chỗ ngồi #hiển thị chỗ ngồi đã chọn ở phần sơ đồ, tiền vé #hiển thị số tiền từ ghế đã chọn
+#Lưu ý:
+	- Màu chủ đạo là đen trắng, có hiệu ứng hover
+	- ghi chú từng đoạn code
+	- Tách code ra các trang HTML,CSS,JS 	
+	- #khi đã chọn xong ngày chiếu, giờ chiếu từ trang cho tiết phim thì sẽ #mở ra khung đặt vé
+
+--KHUNG THANH TOÁN--
+- Hãy dùng ngôn ngữ HTML/CSS code cho tôi 1 khung layout thanh toán
+- #Giao diện gồm có:
+	+ Bên trái góc trên hiển thị #tag độ tuổi và tên phim, ở giữa hiển thị thời gian ngày chiếu đã chọn ở phần đặt vé, tên rạp chiếu và địa chỉ(#hiển thị 1 tên rap bất kì ở Đồng Nai),phòng chiếu và chỗ ngồi, ở dưới là tổng tiền hiển thị số tiền cần thanh toán 
+	+ Bên phải góc trên có biểu tượng dấu(X)để thoát ở giữa hiển thị logo ngân hàng(ví dụ MoMo,Mb bank,...#tối đa 10 ngân hàng khác nhau), ở duới là nút thanh toán
+
+- #Chức năng gồm có: 
+	+ bên phải các thông tin như:(#thời gian,ngày chiếu,phòng chiếu, ghế,tổng tiền) lấy thông tin đã chọn từ phần đặt vé
+	+ Bên phải logo ngân hàng có thể chọn(#chỉ chọn 1),biểu tượng dấu (X) bấm vào để thoát layout
+
+#Lưu ý:
+	- Màu chủ đạo là đen trắng, có hiệu ứng hover
+	- ghi chú từng đoạn code
+	- Tách code ra các trang HTML,CSS,JS 	
+	- #khi bấm nút đặt vé thì sẽ hiện ra khung layout thanh toán
+
+--TRANG LỊCH SỬ--
+- Hãy dùng ngôn ngữ HTML/CSS code cho tôi 1 trang lịch sử
+
+- #giao diện gồm có:
+	+ Bên trên và bên duới là header và footer dùng chung
+	+ ở giữa là nôi dung:#phần bên ngoài là 1 thanh layout hàng ngang (height = 100px, weight = 70% ), #bên trái hiển thị poster phim và #bên phải hiển thị tên phim, ngày  , thời gian  , tổng tiền thanh toán 
+	+ #phần bên trong là khung layout hiển thị góc trái bên trên hiển thị ngày thanh toán , thời gian thanh toán, ở dưới hiển thị phần bên phải của khung layout thanh toán
+- #Chức năng gồm có:
+	+ phần bên ngoài: poster phim lấy từ poster đã chọn khi đặt vé,các thông tin như(#ngày thanh toán,thời gian thanh toán) lấy thời gian thực khi bấm nút thanh toán
+	+ mã giao dịch tự tạo tối đa 6 số bất kì(#mỗi lần thanh toán lưu và vào lịch sử là 1 mã giao dịch khác nhau ) 
+	+ khi bấm vào layout bên ngoài sẽ mở ra khung layout bên trong
+	
+
+#Lưu ý:
+	- Màu chủ đạo là đen trắng, có hiệu ứng hover
+	- ghi chú từng đoạn code
+	- Tách code ra các trang HTML,CSS,JS 	
+	- #liên kết tất cả các trang lại với nhau
+
+--TRANG PHIM--
+- Hãy dùng ngôn ngữ HTML/CSS code cho tôi 1 trang phim:
+
+-#Giao diện gồm có:
+	+ bên trên và bên dưới là Header và Footer lấy từ file"HeaderFooter.css" 
+	+ ở giữa là nội dung #bên phải hiển thị poster phim (#Lấy poster của 10 phim đang chiếu ),trong poster có tag độ tuổi,tag phim đang chiếu, bên dưới poster hiển thị tên phim, ngày phát hành , #bên trái là bộ lọc #layout theo hàng dọc gồm 3 nút(#Phổ biến, Thể loại, ngôn ngữ),nút phổ biến bên trong có(#Phổ biến, Mới nhất),nút Thể loại bên trong  có(#Tất cả, hành động,kinh dị,gia đình, hài, tình cảm, tâm lý), nút ngôn ngữ bên trong có(#Tiếng anh, tiếng việt)
+
+-#Chức năng gồm có:
+	+ #poster có đầy đủ chức năng giống với poster(#phim đang chiếu)
+	+ các nút(#Phổ biến, Thể loại, ngôn ngữ) chức năng làm việc như 1 bộ lọc phim, nút phổ biến(#phổ biến lọc theo số lượng vé được đặt,#mới nhất lọc theo ngày phát hành), nút thể loại lọc theo thể loại, nút ngôn ngữ lọc theo quốc gia
+
+#Lưu ý:
+	- Màu chủ đạo là đen trắng, có hiệu ứng hover
+	- ghi chú từng đoạn code
+	- Tách code ra các trang HTML,CSS,JS 	
+	- #liên kết tất cả các trang lại với nhau
+--THANH TÌM KIẾM--
+- #Thêm cho tôi chức năng trên thanh menu thanh tìm kiếm khi nhập chữ sẽ đề xuất tên phim có chữ cái tương ứng kèm với poster của phim đó(poster bên phải,tên bên trái), khi bấm vào sẽ đẩy trang chi tiết phim 
+
+--Information_AboutUs--
+- Hãy dùng ngôn ngữ HTML/CSS code cho tôi 1 trang AboutUs
+
+- #Giao diện gồm có:
+	+ bên trên và bên dưới là header và footer dùng chung lấy từ file HeaderFooter.css
+	+ ở giữa là nội dung (weight = 70%) có #2 layout bên ngoài trên cùng là hình ảnh, dưới là tên, bên trong là layout góc trên bên trái là hình ảnh kế bên là tên, bên dưới là mô tả nội dung công việc của thành viên đó 
+
+- #Chức năng gồm có:
+	+ khi bấm vào layout bên ngoài sẽ sổ ra layout bên trong, layout bên trong có mũi tên bên góc trái để thoát
+
+#Lưu ý:
+	- Màu chủ đạo là đen trắng, có hiệu ứng hover
+	- ghi chú từng đoạn code
+	- Tách code ra các trang HTML,CSS,JS 	
+	- #liên kết tất cả các trang lại với nhau
+
+--#Thêm điều kiện phải đăng nhập thì mới được thanh toán ,đăng nhập xong thì quay lại trang thanh toán--
