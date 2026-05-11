@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Rạp Phim - Admin</title>
+  <script type="module" crossorigin src="./assets/admin-Dfn-tm61.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="./assets/api-BNIJos2C.js">
+  <link rel="stylesheet" crossorigin href="./assets/admin-DLFtGcjs.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2 font-bold text-xl text-amber-500">
+                    <i data-lucide="clapperboard"></i>
+                    <span>CINEMA MANAGER</span>
+                </div>
+                <div class="hidden md:flex space-x-4 h-full">
+                    <button data-page="movie-types" class="nav-link px-3 py-2 flex items-center gap-1 hover:bg-gray-800 transition-colors border-b-2 border-transparent">
+                        <i data-lucide="tag" class="w-4 h-4"></i> Loại Phim
+                    </button>
+                    <button data-page="movies" class="nav-link px-3 py-2 flex items-center gap-1 hover:bg-gray-800 transition-colors border-b-2 border-transparent active">
+                        <i data-lucide="film" class="w-4 h-4"></i> Phim
+                    </button>
+                    <button data-page="rooms" class="nav-link px-3 py-2 flex items-center gap-1 hover:bg-gray-800 transition-colors border-b-2 border-transparent">
+                        <i data-lucide="monitor" class="w-4 h-4"></i> Phòng
+                    </button>
+                    <button data-page="seat-types" class="nav-link px-3 py-2 flex items-center gap-1 hover:bg-gray-800 transition-colors border-b-2 border-transparent">
+                        <i data-lucide="sofa" class="w-4 h-4"></i> Loại Ghế
+                    </button>
+                    <button data-page="seats" class="nav-link px-3 py-2 flex items-center gap-1 hover:bg-gray-800 transition-colors border-b-2 border-transparent">
+                        <i data-lucide="armchair" class="w-4 h-4"></i> Ghế
+                    </button>
+                    <button data-page="showtimes" class="nav-link px-3 py-2 flex items-center gap-1 hover:bg-gray-800 transition-colors border-b-2 border-transparent">
+                        <i data-lucide="calendar" class="w-4 h-4"></i> Suất Chiếu
+                    </button>
+                    <button data-page="customers" class="nav-link px-3 py-2 flex items-center gap-1 hover:bg-gray-800 transition-colors border-b-2 border-transparent">
+                        <i data-lucide="users" class="w-4 h-4"></i> Khách Hàng
+                    </button>
+                    <button data-page="invoices" class="nav-link px-3 py-2 flex items-center gap-1 hover:bg-gray-800 transition-colors border-b-2 border-transparent">
+                        <i data-lucide="receipt" class="w-4 h-4"></i> Hóa Đơn
+                    </button>
+                    <button data-page="payments" class="nav-link px-3 py-2 flex items-center gap-1 hover:bg-gray-800 transition-colors border-b-2 border-transparent">
+                        <i data-lucide="credit-card" class="w-4 h-4"></i> Thanh Toán
+                    </button>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-sm text-gray-400">Admin</span>
+                    <button id="logout-btn" class="text-gray-300 hover:text-white"><i data-lucide="log-out" class="w-5 h-5"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="app" class="max-w-7xl mx-auto p-4 md:p-8">
+        <div class="flex justify-center items-center h-64">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600"></div>
+        </div>
+    </main>
+
+    <!-- Modals Holder -->
+    <div id="modal-container" class="fixed inset-0 z-[60] flex items-center justify-center pointer-events-none">
+        <div id="modal-backdrop" class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 pointer-events-none"></div>
+        <div id="modal-content" class="bg-white rounded-xl shadow-2xl w-full max-w-2xl transform scale-90 opacity-0 transition-all duration-300 pointer-events-auto">
+            <!-- Modal content injected here -->
+        </div>
+    </div>
+
+</body>
+</html>
