@@ -21,3 +21,8 @@ export default defineConfig(({mode}) => {
     },
   };
 });
+
+// export default defineConfig({
+//   plugins: [tailwindcss()],
+//   base: '/Phim/',
+//   });
