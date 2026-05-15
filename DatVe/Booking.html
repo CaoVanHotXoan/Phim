@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Vé - TEAM BẤT ỔN</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Booking.css">
+    <link rel="stylesheet" href="../Payment.css">
+</head>
+<body class="booking-page">
+    <!-- HEADER ĐẶT VÉ -->
+    <header class="booking-header">
+        <button id="backBtn" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại
+        </button>
+        <div class="header-title">CHỌN GHẾ</div>
+    </header>
+
+    <main class="booking-container">
+        <!-- KHU VỰC SƠ ĐỒ GHẾ -->
+        <section class="seat-map-section">
+            <div class="zoom-controls">
+                <button id="zoomIn"><i class="fa-solid fa-plus"></i></button>
+                <button id="zoomOut"><i class="fa-solid fa-minus"></i></button>
+            </div>
+            
+            <div class="seat-map-wrapper">
+                <div class="seat-map" id="seatMap">
+                    <div class="screen-box">MÀN HÌNH</div>
+                    <div class="seat-grid" id="seatGrid">
+                        <!-- Sẽ được JS render -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHÚ THÍCH (LEGEND) -->
+            <div class="seat-legend">
+                <div class="legend-item"><span class="seat-box booked"></span> Ghế đã đặt</div>
+                <div class="legend-item"><span class="seat-box selected"></span> Ghế bạn chọn</div>
+                <div class="legend-item"><span class="seat-box regular"></span> Ghế thường</div>
+                <div class="legend-item"><span class="seat-box vip"></span> Ghế VIP</div>
+                <div class="legend-item"><span class="seat-box sweetbox"></span> Ghế Sweetbox</div>
+                <div class="legend-item"><span class="seat-box central"></span> Ghế trung tâm</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- THANH THÀNH TIỀN (FOOTER) -->
+    <footer class="booking-footer">
+        <div class="footer-info">
+            <div class="movie-brief">
+                <span class="age-tag" id="fAge">T13</span>
+                <div class="text-group">
+                    <h3 id="fMovieTitle">NGƯỜI NHỆN: DU HÀNH VŨ TRỤ NHỆN</h3>
+                    <p id="fDateTime">Thứ Tư, 19/04 - 15:15 ~ 17:35</p>
+                </div>
+            </div>
+            <div class="hall-info">
+                <span>Phòng chiếu</span>
+                <strong id="fHall">P01</strong>
+            </div>
+            <div class="seats-info">
+                <span>Chỗ ngồi</span>
+                <strong id="fSeats">-</strong>
+            </div>
+            <div class="total-price">
+                <span>Tạm tính</span>
+                <strong id="fPrice">0 VND</strong>
+            </div>
+        </div>
+        <button class="book-btn" id="confirmBooking">ĐẶT VÉ</button>
+    </footer>
+
+    <!-- MODAL THANH TOÁN -->
+    <div class="payment-overlay" id="paymentOverlay">
+        <div class="payment-container">
+            <i class="fa-solid fa-xmark close-payment" id="closePayment"></i>
+            
+            <div class="payment-left">
+                <div class="movie-header">
+                    <span class="payment-age-tag" id="pAge">T13</span>
+                    <h2 class="payment-movie-name" id="pMovieTitle">-</h2>
+                </div>
+                
+                <div class="order-details">
+                    <div class="detail-item">
+                        <label>Thời gian & Ngày chiếu</label>
+                        <span id="pDateTime">-</span>
+                    </div>
+                    <div class="detail-item">
+                        <label>Rạp chiếu</label>
+                        <span>CGV Vincom Biên Hòa (Đồng Nai)</span>
+                    </div>
+                    <div class="detail-item">
+                        <label>Địa chỉ</label>
+                        <span>Tầng 4, Vincom Plaza Biên Hòa, 1096 Phạm Văn Thuận, Tân Mai, Biên Hòa, Đồng Nai</span>
+                    </div>
+                    <div class="detail-item">
+                        <label>Phòng chiếu & Chỗ ngồi</label>
+                        <span>Phòng <strong id="pHall">-</strong> | Ghế: <strong id="pSeats">-</strong></span>
+                    </div>
+                </div>
+
+                <div class="total-amount-section">
+                    <div class="total-label">TỔNG TIỀN THANH TOÁN</div>
+                    <div class="total-value" id="pPrice">0 VND</div>
+                </div>
+            </div>
+
+            <div class="payment-right">
+                <h3 class="payment-title">CHỌN PHƯƠNG THỨC THANH TOÁN</h3>
+                <div class="bank-grid" id="bankGrid">
+                    <!-- Sẽ được render bằng JS -->
+                </div>
+                <button class="pay-now-btn" id="payNowBtn" disabled>THANH TOÁN</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../script.js"></script>
+    <script type="module" src="../api.js"></script>
+</body>
+</html>
